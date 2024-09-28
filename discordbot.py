@@ -30,7 +30,7 @@ async def on_message(message):
     #가챠
     if message.content.startswith(f'{PREFIX}가챠'):
         gacha_result = gacha.getGacha()
-        gacha_message = '달그락, 달그락... <'+gacha_result+'>이(가) 나왔다!'
+        gacha_message = '삐로로롱~ <'+gacha_result+'>이(가) 나왔다!'
         await message.channel.send(gacha_message, reference=message)
 
     #다이스(1d100)
