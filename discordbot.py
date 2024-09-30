@@ -33,6 +33,14 @@ async def on_message(message):
         gacha_message = '삐로로롱~ <'+gacha_result+'>이(가) 나왔다!'
         await message.channel.send(gacha_message, reference=message)
 
+    #동전
+    if message.content.startswith(f'{PREFIX}동전'):
+        c = random.choice(['앞면','뒷면'])
+        embed=discord.Embed(description=":coin:팅그르르...",
+                            color=0x61b866)
+        embed.add_field(name=c, value=" ", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
     #다이스(1d100)
     if message.content.startswith(f'{PREFIX}다이스'):
         d = random.randrange(1,101)
