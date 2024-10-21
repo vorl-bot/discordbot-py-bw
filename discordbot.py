@@ -8,6 +8,9 @@ import random
 import gacha
 import magnum1
 
+from datetime import datetime
+from pytz import timezone
+
 PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
 
@@ -53,8 +56,7 @@ async def on_message(message):
     #혜윰미니게임
     if message.content.startswith(f'{PREFIX}단어'):
         word = magnum1.hyeyum()
-        from datetime import datetime
-        dt = datetime.now()
+        dt = datetime.now((timezone('Asia/Seoul')))
         dtfinalhour = int(dt.strftime('%H'))
         dtfinalminute = int(dt.strftime('%M'))+2
         if dtfinalminute > 59:
@@ -68,6 +70,19 @@ async def on_message(message):
                             color=0xf1c232)
         embed.add_field(name=word, value="", inline=False)
         await message.channel.send(embed=embed, reference=message)
+
+    #벨체르미니게임
+     if message.content.startswith(f'{PREFIX}양털'):
+        lamb = magnum1.belcher()
+        text1 = lamb[0]
+        text2 = lamb[1]
+
+        embed=discord.Embed(title=":sheep:양털깎기!", 
+                            description="양털을 깎고 퐁당이를 구출하자. 싹둑싹둑...", 
+                            color=0x6aa84f)
+        embed.add_field(name=text1, value=text2, inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
 
 
 try:
