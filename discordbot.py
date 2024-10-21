@@ -6,6 +6,7 @@ import os
 load_dotenv()
 import random
 import gacha
+import magnum1
 
 PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
@@ -48,6 +49,16 @@ async def on_message(message):
                             color=0x000000)
         embed.add_field(name=d, value=" ", inline=False)
         await message.channel.send(embed=embed, reference=message)
+
+    #혜윰미니게임
+    if message.content.startswith(f'{PREFIX}단어'):
+        word = magnum1.hyeyum()
+        embed=discord.Embed(title=":pencil:공용어 퀴즈!", 
+                            description="다음의 초성으로 시작하는 단어를 3개 제시하시오.", 
+                            color=0xf1c232)
+        embed.add_field(name=word, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
 
 try:
     client.run(TOKEN)
