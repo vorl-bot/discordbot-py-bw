@@ -55,10 +55,16 @@ async def on_message(message):
         word = magnum1.hyeyum()
         from datetime import datetime
         dt = datetime.now()
-        dtfinalminute = str(int(dt.strftime('%M'))+2)
+        dtfinalhour = int(dt.strftime('%H'))
+        dtfinalminute = int(dt.strftime('%M'))+2
+        if dtfinalminute > 59:
+            dtfinalminute = dtfinalminute - 60
+            dtfinalhour = dtfinalhour +1
+            if dtfinalhour >= 24:
+                dtfinalhour = dtfinalhour - 24
 
         embed=discord.Embed(title=":pencil:공용어 퀴즈!", 
-                            description="다음의 초성으로 시작하는 단어를 3개 제시하시오.\n 제한시간: "+dt.strftime('%Y년 %m월 %d일 %H시 ')+dtfinalminute+'분까지', 
+                            description='다음의 초성으로 시작하는 단어를 3개 제시하시오.\n 제한시간: '+str(dtfinalhour)+'시 '+str(dtfinalminute)+'분까지', 
                             color=0xf1c232)
         embed.add_field(name=word, value="", inline=False)
         await message.channel.send(embed=embed, reference=message)
