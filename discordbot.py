@@ -85,15 +85,15 @@ async def on_message(message):
 
     #로테폴미니게임
     if message.content.startswith(f'{PREFIX}숫자'):
-        calc = magnum1.rhotepol()
-        calc1 = calc[0]
-        calc2 = calc[1]
+        calc1 = magnum1.rhotepol()
+        calc2 = magnum1.rhotepol()
+
+        calc_result = calc1 + '  '+calc2
 
         embed=discord.Embed(title=":abacus:사칙연산!", 
                             description="제시된 숫자 또는 부호를 모두 사용해 수식을 만들어보자.\n 계산한 값이 0이 되는 수식을 완성하면 성공! ", 
                             color=0x2d4799)
-        embed.add_field(name=calc1, value="", inline=True)
-        embed.add_field(name=calc2, value="", inline=True)
+        embed.add_field(name=calc_result, value='', inline=True)
         await message.channel.send(embed=embed, reference=message)
 
 try:

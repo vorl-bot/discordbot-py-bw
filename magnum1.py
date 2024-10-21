@@ -34,8 +34,12 @@ def belcher():
     return text1, text2
 
 def rhotepol():
-    calc = ['0','1','2','3','4','5','6','7','8','9','＋','－','×','÷','√']
-    calc1 = random.choice(calc)
-    calc2 = random.choice(calc)
+    calcs = ['1','2','3','4','5','6','7','8','9','＋','－','×','÷','√']
+    calc_result = random.randrange(1,31)
 
-    return calc1, calc2
+    if calc_result < 2:
+        calc = str(0)
+    else:
+        calc = random.choice(calcs)
+    
+    return calc
