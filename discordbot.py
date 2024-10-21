@@ -53,8 +53,12 @@ async def on_message(message):
     #혜윰미니게임
     if message.content.startswith(f'{PREFIX}단어'):
         word = magnum1.hyeyum()
+        from datetime import datetime
+        dt = datetime.now()
+        dtfinalminute = int(dt.strftime('%M'))+2
+
         embed=discord.Embed(title=":pencil:공용어 퀴즈!", 
-                            description="다음의 초성으로 시작하는 단어를 3개 제시하시오.", 
+                            description="다음의 초성으로 시작하는 단어를 3개 제시하시오.\n 제한시간: "+dt.strftime('%Y년 %m월 %d일 %H시 ')+dtfinalminute+'분 '+dt.strftime('%S초까지'), 
                             color=0xf1c232)
         embed.add_field(name=word, value="", inline=False)
         await message.channel.send(embed=embed, reference=message)
