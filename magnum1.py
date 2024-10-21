@@ -16,7 +16,7 @@ def hyeyum():
 
 
 def belcher():
-    lamb_result = random.choice(1,101)
+    lamb_result = random.randrange(1,101)
 
     if lamb_result < 51:
         text1 = '이런!'
