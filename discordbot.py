@@ -72,7 +72,7 @@ async def on_message(message):
         await message.channel.send(embed=embed, reference=message)
 
     #벨체르미니게임
-     if message.content.startswith(f'{PREFIX}양털'):
+    if message.content.startswith(f'{PREFIX}양털'):
         lamb = magnum1.belcher()
         text1 = lamb[0]
         text2 = lamb[1]
