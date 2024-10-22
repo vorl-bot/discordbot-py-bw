@@ -96,6 +96,15 @@ async def on_message(message):
         embed.add_field(name=calc_result, value='', inline=True)
         await message.channel.send(embed=embed, reference=message)
 
+    #나이라미니게임
+    if message.content.startswith(f'{PREFIX}배팅'):
+
+        embed=discord.Embed(title=":moneybag:배팅!",
+                            description="높은 수일까, 낮은 수일까? 결과는...",
+                            color=0x8c2b3f)
+        embed.add_field(name=random.randrange(1,51), value='', inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
 try:
     client.run(TOKEN)
 except discord.errors.LoginFailure as e:
