@@ -105,6 +105,49 @@ async def on_message(message):
         embed.add_field(name=random.randrange(1,51), value='', inline=False)
         await message.channel.send(embed=embed, reference=message)
 
+    #사금채취
+    if message.content.startswith(f'{PREFIX}사금채취'):
+        gold = random.choice(['『사금』이 채취되었다! ','『모래』 뿐이다·····!'])
+
+        embed=discord.Embed(title=":star2:일확천금 사금채취!", 
+                            description='찰랑찰랑찰랑····. 수조 안에 든 모래를 퍼올리고, 다시 접시를 물에 가라앉혀 모래를 흘려보내면······.', 
+                            color=0xf1c232)
+        embed.add_field(name=word, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+    #도자기
+    if message.content.startswith(f'{PREFIX}도자기'):
+        ceramicNum = random.randrange(1,5)
+
+        if ceramicNum == 1:
+            ceramic = '으아아아아아악! 이건 「도자기…?」. 도자기라고 할 수 있을까?'
+        
+        elif ceramicNum == 2:
+            ceramic = '「조금 미흡한 도자기」의 모습이 나왔다! 색을 얹고 장식을 하고 구워도 조금…미묘한 모양새이지만 괜찮으려나.'
+
+        elif ceramicNum == 3:
+            ceramic = '「괜찮은 도자기」의 모습이 나왔다! 색을 얹고 장식을 하고 구우면 괜찮을 거야!'
+
+        elif ceramicNum == 4:
+            ceramic = '「완벽한 도자기」의 모습이 나왔다! 색을 얹고 장식을 하고 구우면 완벽해!'
+        
+
+        embed=discord.Embed(title=":amphora:일확천금 사금채취!", 
+                            description='빙글빙글빙글······. 담당퐁당의 도움을 받아 흙을 얹고 물레를 돌린다. 집중하여 흙에 손을 얹고 물레를 돌리고 있으면····', 
+                            color=0xffb0c0)
+        embed.add_field(name=ceramic, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+    #통발
+    if message.content.startswith(f'{PREFIX}통발'):
+        fishNum = str(random.randrange(0,21))
+
+        embed=discord.Embed(title=":fish:통발 낚시!", 
+                            description="영차영차 통발을 건졌다. 몇 마리나 잡혔을까? 확인해보면...", 
+                            color=0x2d4799)
+        embed.add_field(name=fishNum+'마리를 잡았다!', value='', inline=True)
+        await message.channel.send(embed=embed, reference=message)
+
 try:
     client.run(TOKEN)
 except discord.errors.LoginFailure as e:
