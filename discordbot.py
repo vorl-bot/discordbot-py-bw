@@ -106,7 +106,7 @@ async def on_message(message):
         await message.channel.send(embed=embed, reference=message)
 
     #사금채취
-    if message.content.startswith(f'{PREFIX}사금채취'):
+    if message.content.startswith(f'{PREFIX}사금'):
         gold = random.choice(['『사금』이 채취되었다! ','『모래』 뿐이다·····!'])
 
         embed=discord.Embed(title=":star2:일확천금 사금채취!", 
