@@ -112,7 +112,7 @@ async def on_message(message):
         embed=discord.Embed(title=":star2:일확천금 사금채취!", 
                             description='찰랑찰랑찰랑····. 수조 안에 든 모래를 퍼올리고, 다시 접시를 물에 가라앉혀 모래를 흘려보내면······.', 
                             color=0xf1c232)
-        embed.add_field(name=word, value="", inline=False)
+        embed.add_field(name=gold, value="", inline=False)
         await message.channel.send(embed=embed, reference=message)
 
     #도자기
@@ -132,7 +132,7 @@ async def on_message(message):
             ceramic = '「완벽한 도자기」의 모습이 나왔다! 색을 얹고 장식을 하고 구우면 완벽해!'
         
 
-        embed=discord.Embed(title=":amphora:일확천금 사금채취!", 
+        embed=discord.Embed(title=":amphora:도자기를 만들자!", 
                             description='빙글빙글빙글······. 담당퐁당의 도움을 받아 흙을 얹고 물레를 돌린다. 집중하여 흙에 손을 얹고 물레를 돌리고 있으면····', 
                             color=0xffb0c0)
         embed.add_field(name=ceramic, value="", inline=False)
