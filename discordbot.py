@@ -148,6 +148,16 @@ async def on_message(message):
         embed.add_field(name=fishNum+'마리를 잡았다!', value='', inline=True)
         await message.channel.send(embed=embed, reference=message)
 
+     #운송게임
+    if message.content.startswith(f'{PREFIX}운송'):
+        trans = magnum1.transport()
+
+        embed=discord.Embed(title=":camel:아트라프를 향해 출발!",
+                            description=trans,
+                            color=0x8c2b3f)
+        embed.add_field(name='', value='', inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
 try:
     client.run(TOKEN)
 except discord.errors.LoginFailure as e:
