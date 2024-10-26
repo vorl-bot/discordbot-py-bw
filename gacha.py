@@ -17,15 +17,15 @@ items = ['벼루','마법소녀 피규어','무료 식권','해시계','달토�
          '요거트 교환권','절연 테이프','〈해바라기와 여름 청년〉 악보',
          '색만 다르고 꼭 닮은 여자아이 두 명이 찍힌 사진','배 모형 부품']
 
-specialA = [['『벨체르 전통 복식A』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fr6EcN%2FbtsKkwgnICY%2FZsafMAYbaK4C309lVyRG6K%2Fimg.png'],
-            ['『벨체르 전통 복식B』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyiTZz%2FbtsKkdn4RJR%2FuF2JKugGFNZivyeJen0Rq0%2Fimg.png'],
-            ['『잠옷』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FA0V8N%2FbtsKkb4Oyw1%2FvUOJw9FKsmPqpZNH8ioAO1%2Fimg.png'],
-            ['『퐁당 잠옷』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcyeGdn%2FbtsKkYKnKSB%2FbyVdJ22kCmVKZ5Q6DMwvnk%2Fimg.png'],
-            ['『피콕 잠옷』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPN0O2%2FbtsKkcQdm0E%2FHqHMJKesUpiH1JKEJKwH6k%2Fimg.png'],
-            ['『셀라레 아카데미 체육복A』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5EKwq%2FbtsKk267Hdc%2Fx7G66UkxkHT4K6e6pwu7TK%2Fimg.png'],
-            ['『셀라레 아카데미 체육복B』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F6ZBEV%2FbtsKlwNqHfv%2F8qdntiBKkTbpyCQl1elRDk%2Fimg.png']]
+specialA = [['『벨체르 전통 복식A』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fr6EcN%2FbtsKkwgnICY%2FZsafMAYbaK4C309lVyRG6K%2Fimg.png',''],
+            ['『벨체르 전통 복식B』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyiTZz%2FbtsKkdn4RJR%2FuF2JKugGFNZivyeJen0Rq0%2Fimg.png',''],
+            ['『잠옷』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FA0V8N%2FbtsKkb4Oyw1%2FvUOJw9FKsmPqpZNH8ioAO1%2Fimg.png',''],
+            ['『퐁당 잠옷』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcyeGdn%2FbtsKkYKnKSB%2FbyVdJ22kCmVKZ5Q6DMwvnk%2Fimg.png',''],
+            ['『피콕 잠옷』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPN0O2%2FbtsKkcQdm0E%2FHqHMJKesUpiH1JKEJKwH6k%2Fimg.png',''],
+            ['『셀라레 아카데미 체육복A』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5EKwq%2FbtsKk267Hdc%2Fx7G66UkxkHT4K6e6pwu7TK%2Fimg.png',''],
+            ['『셀라레 아카데미 체육복B』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F6ZBEV%2FbtsKlwNqHfv%2F8qdntiBKkTbpyCQl1elRDk%2Fimg.png','']]
 
-specialB = ['퐁당 인형(기본)','피콕 인형']
+specialB = ['퐁당이 인형(10cm)','퐁당이 인형(20cm)','피콕 인형','퐁당 모자','피콕 모자','피콕 포토카드 세트','퐁당 포토카드 세트','퐁당 특제 음료수 교환권','만화책 대여권']
 
 
 def getGacha():
@@ -36,7 +36,7 @@ def getGacha():
 def specialGacha():
     specialNum = random.randrange(1,101)
 
-    if specialNum < 51:
+    if specialNum < 21:
         special = random.choice(specialA)
 
     else:
