@@ -25,7 +25,7 @@ specialA = [['『벨체르 전통 복식A』','https://img1.daumcdn.net/thumb/R1
             ['『셀라레 아카데미 체육복A』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5EKwq%2FbtsKk267Hdc%2Fx7G66UkxkHT4K6e6pwu7TK%2Fimg.png',''],
             ['『셀라레 아카데미 체육복B』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F6ZBEV%2FbtsKlwNqHfv%2F8qdntiBKkTbpyCQl1elRDk%2Fimg.png','']]
 
-specialB = [['빛의 종소리 퐁당이 인형(10cm)','어쩐지 건방진 표정을 하고 있는 퐁당이 인형. 별 모양의 머리 장식이 인상적이다.']]
+specialB = [['『빛의 종소리 퐁당이 인형(10cm)』','어쩐지 건방진 표정을 하고 있는 퐁당이 인형. 별 모양의 머리 장식이 인상적이다.']]
 
 specialC = ['퐁당이 인형(10cm)','퐁당이 인형(20cm)','피콕 경 인형','퐁당이 모자','피콕 경 모자','피콕 경 포토카드 세트','퐁당이 포토카드 세트','퐁당이 특제 음료수 교환권','만화책 대여권']
 
