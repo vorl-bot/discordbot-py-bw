@@ -17,15 +17,26 @@ items = ['벼루','마법소녀 피규어','무료 식권','해시계','달토�
          '요거트 교환권','절연 테이프','〈해바라기와 여름 청년〉 악보',
          '색만 다르고 꼭 닮은 여자아이 두 명이 찍힌 사진','배 모형 부품']
 
-specialA = [['『벨체르 전통 복식A』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fr6EcN%2FbtsKkwgnICY%2FZsafMAYbaK4C309lVyRG6K%2Fimg.png',''],
-            ['『벨체르 전통 복식B』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyiTZz%2FbtsKkdn4RJR%2FuF2JKugGFNZivyeJen0Rq0%2Fimg.png',''],
-            ['『잠옷』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FA0V8N%2FbtsKkb4Oyw1%2FvUOJw9FKsmPqpZNH8ioAO1%2Fimg.png',''],
-            ['『퐁당 잠옷』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcyeGdn%2FbtsKkYKnKSB%2FbyVdJ22kCmVKZ5Q6DMwvnk%2Fimg.png',''],
-            ['『피콕 경 잠옷』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPN0O2%2FbtsKkcQdm0E%2FHqHMJKesUpiH1JKEJKwH6k%2Fimg.png',''],
-            ['『셀라레 아카데미 체육복A』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5EKwq%2FbtsKk267Hdc%2Fx7G66UkxkHT4K6e6pwu7TK%2Fimg.png',''],
-            ['『셀라레 아카데미 체육복B』','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F6ZBEV%2FbtsKlwNqHfv%2F8qdntiBKkTbpyCQl1elRDk%2Fimg.png','']]
+specialA = [['벨체르 전통 복식A','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fr6EcN%2FbtsKkwgnICY%2FZsafMAYbaK4C309lVyRG6K%2Fimg.png',''],
+            ['벨체르 전통 복식B','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyiTZz%2FbtsKkdn4RJR%2FuF2JKugGFNZivyeJen0Rq0%2Fimg.png',''],
+            ['잠옷','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FA0V8N%2FbtsKkb4Oyw1%2FvUOJw9FKsmPqpZNH8ioAO1%2Fimg.png',''],
+            ['퐁당 잠옷','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcyeGdn%2FbtsKkYKnKSB%2FbyVdJ22kCmVKZ5Q6DMwvnk%2Fimg.png',''],
+            ['피콕 경 잠옷','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPN0O2%2FbtsKkcQdm0E%2FHqHMJKesUpiH1JKEJKwH6k%2Fimg.png',''],
+            ['셀라레 아카데미 체육복A','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5EKwq%2FbtsKk267Hdc%2Fx7G66UkxkHT4K6e6pwu7TK%2Fimg.png',''],
+            ['셀라레 아카데미 체육복B','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F6ZBEV%2FbtsKlwNqHfv%2F8qdntiBKkTbpyCQl1elRDk%2Fimg.png','']]
 
-specialB = [['『빛의 종소리 퐁당이 인형(10cm)』','어쩐지 건방진 표정을 하고 있는 퐁당이 인형. 별 모양의 머리 장식이 인상적이다.']]
+specialB = [['빛의 종소리 퐁당이 인형(10cm)','어쩐지 건방진 표정을 하고 있는 퐁당이 인형. 별 모양의 머리 장식이 인상적이다.'],
+            ['가속화 퐁당이 인형(10cm)','주눅든 표정을 하고 있는 퐁당이 인형. 퐁당 태블릿 PC를 들고 있다.'],
+            ['투시 퐁당이 인형(10cm)','왼쪽 눈 아래에 점이 있는 퐁당이 인형. 한쪽 눈을 감고 있다.'],
+            ['모래조종 퐁당이 인형(10cm)','지팡이를 들고 있는 퐁당이 인형. 다른 퐁당이 인형과 촉감과 무게감이 다르다. 설마…?'],
+            ['필사 퐁당이 인형(10cm)','책을 들고 있는 퐁당이 인형. 헛소리를 하면 타박을 들을 것 같다.'],
+            ['두두리 퐁당이 인형(10cm)','근엄한 표정을 하고 있는 퐁당이 인형. 지혜와 기품이 느껴진다.'],
+            ['절대배합 퐁당이 인형(10cm)','갓을 쓰고 있는 퐁당이 인형. 좋은 향이 난다.'],
+            ['연마 퐁당이 인형(10cm)','코랄색 머리띠를 한 퐁당이 인형이라는 겁니다요.'],
+            ['식물조종 퐁당이 인형(10cm)','봉을 들고 있는 퐁당이 인형. 눈을 마주치면 싸워야 할 것 같다….'],
+            ['독 퐁당이 인형(10cm)','열쇠 목걸이를 걸고 있는 퐁당이 인형. 어쩐지 나를 빤히 바라보는 것 같다….'],
+            ['영상구속 퐁당이 인형(10cm)','양 눈을 감고 있는 퐁당이 인형. 퐁당 카메라를 들고 있다…. 어라, 이거 조금…….'],
+            ['염동력 퐁당이 인형(10cm)','끝 부분이 리본 같은 꽃 모양인 퐁당이 인형. 10초 정도 허공에 떠있을 수 있다.']]
 
 specialC = [['퐁당이 인형(10cm)'],['퐁당이 인형(20cm)'],['피콕 경 인형'],['퐁당이 모자'],['피콕 경 모자'],['피콕 경 포토카드 세트'],['퐁당이 포토카드 세트'],['퐁당이 특제 음료수 교환권'],['만화책 대여권']]
 

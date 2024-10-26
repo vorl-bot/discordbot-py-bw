@@ -166,7 +166,7 @@ async def on_message(message):
             embed=discord.Embed(title="달각달각달각달각······.", 
                                 description="기계 안에서 캡슐이 나왔다! 캡슐을 열어보면·······.", 
                                 color=0x008083)
-            embed.add_field(name="", value=special[0]+"이(가) 나왔다. 인형에 딱 맞을 것 같은 사이즈네!", inline=False)
+            embed.add_field(name="", value='「'+special[0]+"」이(가) 나왔다. 인형에 딱 맞을 것 같은 사이즈네!", inline=False)
             embed.set_image(url=special[1])
             await message.channel.send(embed=embed, reference=message)
 
@@ -174,14 +174,14 @@ async def on_message(message):
             embed=discord.Embed(title="달각달각달각달각······.", 
                                 description="기계 안에서 캡슐이 나왔다! 캡슐을 열어보면·······.", 
                                 color=0x008083)
-            embed.add_field(name="", value=special[0]+"이(가) 나왔다.\n"+special[1], inline=False)
+            embed.add_field(name="", value='《'+special[0]+"》이(가) 나왔다.\n"+special[1], inline=False)
             await message.channel.send(embed=embed, reference=message)
 
         if len(special) == 1:
             embed=discord.Embed(title="달각달각달각달각······.", 
                                 description="기계 안에서 캡슐이 나왔다! 캡슐을 열어보면·······.", 
                                 color=0x008083)
-            embed.add_field(name="", value=special[0]+"이(가) 나왔다.", inline=False)
+            embed.add_field(name="", value='<'+special[0]+">이(가) 나왔다.", inline=False)
             await message.channel.send(embed=embed, reference=message)
 
 try:
