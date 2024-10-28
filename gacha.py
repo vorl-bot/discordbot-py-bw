@@ -15,7 +15,12 @@ items = ['벼루','마법소녀 피규어','무료 식권','해시계','달토�
          '미니 슬레이트(베이지)','입체 퍼즐','터그 놀이 로프 장난감',
          '정말 맛있는 심해 괴식 요리 3선 식사권','조개가 든 유리병',
          '요거트 교환권','절연 테이프','〈해바라기와 여름 청년〉 악보',
-         '색만 다르고 꼭 닮은 여자아이 두 명이 찍힌 사진','배 모형 부품']
+         '색만 다르고 꼭 닮은 여자아이 두 명이 찍힌 사진','배 모형 부품',
+         '오선지 묶음','미스터 펭귄 인형','비취 원석','선인장',
+         '달 모양 장식이 달린 노리개','화형별전','파란색 댕기','깃털 장식이 달린 썬캐쳐',
+         '고기 1kg 교환권','잠긴 보석함','원숭이 인형','고래 인형','청록빛 공작 깃털',
+         '눈물 젖은(모양이 그려진) 베개','고래 워터볼','목검','용접마스크',
+         '음악앨범 〈단풍〉의 레코드판','딸기우유 모양 키링','만두 교환권']
 
 specialA = [['벨체르 전통 복식A','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fr6EcN%2FbtsKkwgnICY%2FZsafMAYbaK4C309lVyRG6K%2Fimg.png',''],
             ['벨체르 전통 복식B','https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyiTZz%2FbtsKkdn4RJR%2FuF2JKugGFNZivyeJen0Rq0%2Fimg.png',''],
