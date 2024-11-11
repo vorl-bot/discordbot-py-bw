@@ -6,8 +6,9 @@ import os
 load_dotenv()
 import random
 import gacha
-import magnum1
+import magnum2
 import soriziller
+import omikuji
 
 from datetime import datetime
 from pytz import timezone
@@ -59,10 +60,33 @@ async def on_message(message):
        noreabang = soriziller.soriziller()
        SongText = noreabang[0]
        SongText2 = noreabang[1]
-       embed = discord.Embed(description=":microphone:점수는! 두구두구…",
+       embed = discord.Embed(description=":mirror_ball:점수는! 두구두구…",
                             color=0x008083)
        embed.add_field(name=SongText, value=SongText2, inline=False)
        await message.channel.send(embed=embed, reference=message)
+
+    #운세
+    if message.content.startswith(f'{PREFIX}운세'):
+       lucktest = omikuji.omikuji()
+       omikujiText = lucktest[0]
+       omikujiText2 = lucktest[1]
+       embed = discord.Embed(description=":red_envelope:오늘의 운세!",
+                            color=0x008083)
+       embed.add_field(name=omikujiText, value=omikujiText2, inline=False)
+       await message.channel.send(embed=embed, reference=message)
+
+    #마그눔오푸스2
+    #물풍선낚시
+    if message.content.startswith(f'{PREFIX}물풍선'):
+        yoyo = magnum2.yoyotsuri()
+        yoyotext = yoyo[0]
+        yoyotext2 = yoyo[1]
+        embed=discord.Embed(title=":bubbles:물풍선낚시!", 
+                            description="조심조심······. 가는 종이를 돌려 만들어진 낚싯대를 들고 물풍선의 고리를 낚싯대에 걸어 물풍선을 건져보자.", 
+                            color=0x6aa84f)
+        embed.add_field(name=yoyotext, value=yoyotext2, inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
 
            #특수가챠
     if message.content.startswith(f'{PREFIX}특챠'):
