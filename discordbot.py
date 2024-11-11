@@ -83,7 +83,7 @@ async def on_message(message):
         yoyotext2 = yoyo[1]
         embed=discord.Embed(title=":bubbles:물풍선낚시!", 
                             description="조심조심······. 가는 종이를 돌려 만들어진 낚싯대를 들고 물풍선의 고리를 낚싯대에 걸어 물풍선을 건져보자.", 
-                            color=0x6aa84f)
+                            color=0x52ebff)
         embed.add_field(name=yoyotext, value=yoyotext2, inline=False)
         await message.channel.send(embed=embed, reference=message)
 
