@@ -2,25 +2,27 @@ import random
 
 def shot():
     
-    shotscore1 = random.randrange(1,1000)
+    multiple = (0,0,10,10,10,10,10,100,100,100)
+
+    shotscore1 = random.randrange(0,1001)
     shotscore1 = shotscore1 % 11
-    shotscore1 = shotscore1 * random.choice(0,0,10,10,10,10,10,100,100,100)
+    shotscore1 = shotscore1 * random.choice(multiple)
 
-    shotscore2 = random.randrange(1,1000)
+    shotscore2 = random.randrange(0,1001)
     shotscore2 = shotscore2 % 11
-    shotscore2 = shotscore2 * random.choice(0,0,10,10,10,10,10,100,100,100)
+    shotscore2 = shotscore2 * random.choice(multiple)
 
-    shotscore3 = random.randrange(1,1000)
+    shotscore3 = random.randrange(0,1001)
     shotscore3 = shotscore3 % 11
-    shotscore3 = shotscore3 * random.choice(0,0,10,10,10,10,10,100,100,100)
+    shotscore3 = shotscore3 * random.choice(multiple)
 
-    shotscore4 = random.randrange(1,1000)
+    shotscore4 = random.randrange(0,1001)
     shotscore4 = shotscore4 % 11
-    shotscore4 = shotscore4 * random.choice(0,0,10,10,10,10,10,100,100,100)
+    shotscore4 = shotscore4 * random.choice(multiple)
 
-    shotscore5 = random.randrange(1,1000)
+    shotscore5 = random.randrange(0,1001)
     shotscore5 = shotscore5 % 11
-    shotscore5 = shotscore5 * random.choice(0,0,10,10,10,10,10,100,100,100)
+    shotscore5 = shotscore5 * random.choice(multiple)
     
     totalscore = shotscore1+shotscore2+shotscore3+shotscore4+shotscore5
 
@@ -28,7 +30,13 @@ def shot():
     sText2 = '얻은 점수는 '+totalscore+'점!'
 
     if totalscore >= 2000:
-        sText3 = '뭐라고하지 아 졸려'
+        sText3 = '축하합니다! 1등상 ㅇㅇㅇ를 받았다!'
+    elif totalscore < 2000 and totalscore >= 1000 :
+        sText3 = '축하합니다! 2등상 '
+    elif totalscore < 2000 and totalscore >= 1000 :
+        sText3 = '경품 뭐 주냐'
+    elif totalscore < 2000 and totalscore >= 1000 :
+        sText3 = '경품 뭐 주냐'
     elif totalscore < 2000 and totalscore >= 1000 :
         sText3 = '경품 뭐 주냐'
 
