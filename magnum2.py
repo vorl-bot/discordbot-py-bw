@@ -26,22 +26,21 @@ def shot():
     
     totalscore = shotscore1+shotscore2+shotscore3+shotscore4+shotscore5
 
-    sText = '탕! '+shotscore1+'점을 맞췄다. \n 탕! '+shotscore2+'점을 맞췄다. \n 탕! '+shotscore3+'점을 맞췄다. \n 탕! '+shotscore4+'점을 맞췄다. \n 탕! '+shotscore5+'점을 맞췄다.'
-    sText2 = '얻은 점수는 '+totalscore+'점!'
+    sText = '탕! '+str(shotscore1)+'점을 맞췄다. \n 탕! '+str(shotscore2)+'점을 맞췄다. \n 탕! '+str(shotscore3)+'점을 맞췄다. \n 탕! '+str(shotscore4)+'점을 맞췄다. \n 탕! '+str(shotscore5)+'점을 맞췄다.'
+    sText2 = '얻은 점수는 '+str(totalscore)+'점!'
 
-    if totalscore >= 2000:
-        sText3 = '축하합니다! 1등상 사격 퐁당 인형과 3펄을 받았다!'
+    if totalscore >= 3500:
+        sText3 = '축하합니다! 1등상 꽃다발과 사격 퐁당 인형과 5펄을 받았다!'
+    elif totalscore < 3500 and totalscore >= 3000 :
+        sText3 = '축하합니다! 2등상 꽃 한송이와 퐁당 미니 시계와 4펄을 받았다!'
+    elif totalscore < 3000 and totalscore >= 2500 :
+        sText3 = '축하합니다! 3등상 퐁당 피규어와 3펄을 받았다!'
+    elif totalscore < 2500 and totalscore >= 2000 :
+        sText3 = '축하합니다! 4등상 3펄을 받았다!'
     elif totalscore < 2000 and totalscore >= 1000 :
-        sText3 = '축하합니다! 2등상 ㅇㅇㅇ와 2펄을 받았다!'
-    elif totalscore < 2000 and totalscore >= 1000 :
-        sText3 = '경품 뭐 주냐'
-    elif totalscore < 2000 and totalscore >= 1000 :
-        sText3 = '경품 뭐 주냐'
-    elif totalscore < 2000 and totalscore >= 1000 :
-        sText3 = '경품 뭐 주냐'
+        sText3 = '축하합니다! 5등상 1펄을 받았다!'
     elif totalscore >=0 and totalscore < 1000:
         sText3 = '참가상 1셀을 받았다!'
-    
 
     return sText, sText2, sText3
 
