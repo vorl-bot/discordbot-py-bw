@@ -86,6 +86,18 @@ async def on_message(message):
                             color=0x52ebff)
         embed.add_field(name=yoyotext, value=yoyotext2, inline=False)
         await message.channel.send(embed=embed, reference=message)
+    #사격게임
+    if message.content.startswith(f'{PREFIX}사격'):
+        shotgame = magnum2.shot()
+        shottext = shotgame[0]
+        shottext2 = shotgame[1]
+        shottext3 = shotgame[2]
+        embed=discord.Embed(title=":gun:사격게임", 
+                            description="기회는 5번! 준비하시고~ 쏘세요!", 
+                            color=0x6D4948)
+        embed.add_field(name='', value=shottext, inline=False)
+        embed.add_field(name=shottext2, value=shottext3, inline=False)
+        await message.channel.send(embed=embed, reference=message)
 
 
            #특수가챠

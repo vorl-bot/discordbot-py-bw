@@ -2,8 +2,39 @@ import random
 
 def shot():
     
+    shotscore1 = random.randrange(1,1000)
+    shotscore1 = shotscore1 % 11
+    shotscore1 = shotscore1 * random.choice(0,0,10,10,10,10,10,100,100,100)
 
-    return
+    shotscore2 = random.randrange(1,1000)
+    shotscore2 = shotscore2 % 11
+    shotscore2 = shotscore2 * random.choice(0,0,10,10,10,10,10,100,100,100)
+
+    shotscore3 = random.randrange(1,1000)
+    shotscore3 = shotscore3 % 11
+    shotscore3 = shotscore3 * random.choice(0,0,10,10,10,10,10,100,100,100)
+
+    shotscore4 = random.randrange(1,1000)
+    shotscore4 = shotscore4 % 11
+    shotscore4 = shotscore4 * random.choice(0,0,10,10,10,10,10,100,100,100)
+
+    shotscore5 = random.randrange(1,1000)
+    shotscore5 = shotscore5 % 11
+    shotscore5 = shotscore5 * random.choice(0,0,10,10,10,10,10,100,100,100)
+    
+    totalscore = shotscore1+shotscore2+shotscore3+shotscore4+shotscore5
+
+    sText = '탕! '+shotscore1+'점을 맞췄다. \n 탕! '+shotscore2+'점을 맞췄다. \n 탕! '+shotscore3+'점을 맞췄다. \n 탕! '+shotscore4+'점을 맞췄다. \n 탕! '+shotscore5+'점을 맞췄다.'
+    sText2 = '얻은 점수는 '+totalscore+'점!'
+
+    if totalscore >= 2000:
+        sText3 = '뭐라고하지 아 졸려'
+    elif totalscore < 2000 and totalscore >= 1000 :
+        sText3 = '경품 뭐 주냐'
+
+    
+
+    return sText, sText2, sText3
 
 def yoyotsuri():
 
