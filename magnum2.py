@@ -2,7 +2,7 @@ import random
 
 def shot():
     
-    multiple = (0,0,10,10,10,10,10,100,100,100)
+    multiple = [0,0,10,10,10,10,10,100,100,100]
 
     shotscore1 = random.randrange(0,1001)
     shotscore1 = shotscore1 % 11
@@ -30,9 +30,9 @@ def shot():
     sText2 = '얻은 점수는 '+totalscore+'점!'
 
     if totalscore >= 2000:
-        sText3 = '축하합니다! 1등상 ㅇㅇㅇ를 받았다!'
+        sText3 = '축하합니다! 1등상 사격 퐁당 인형과 3펄을 받았다!'
     elif totalscore < 2000 and totalscore >= 1000 :
-        sText3 = '축하합니다! 2등상 '
+        sText3 = '축하합니다! 2등상 ㅇㅇㅇ와 2펄을 받았다!'
     elif totalscore < 2000 and totalscore >= 1000 :
         sText3 = '경품 뭐 주냐'
     elif totalscore < 2000 and totalscore >= 1000 :
