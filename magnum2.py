@@ -6,23 +6,23 @@ def shot():
 
     shotscore1 = random.randrange(0,1001)
     shotscore1 = shotscore1 % 11
-    shotscore1 = shotscore1 * random.choice(multiple)
+    shotscore1 = shotscore1 * int(random.choice(multiple))
 
     shotscore2 = random.randrange(0,1001)
     shotscore2 = shotscore2 % 11
-    shotscore2 = shotscore2 * random.choice(multiple)
+    shotscore2 = shotscore2 * int(random.choice(multiple))
 
     shotscore3 = random.randrange(0,1001)
     shotscore3 = shotscore3 % 11
-    shotscore3 = shotscore3 * random.choice(multiple)
+    shotscore3 = shotscore3 * int(random.choice(multiple))
 
     shotscore4 = random.randrange(0,1001)
     shotscore4 = shotscore4 % 11
-    shotscore4 = shotscore4 * random.choice(multiple)
+    shotscore4 = shotscore4 * int(random.choice(multiple))
 
     shotscore5 = random.randrange(0,1001)
     shotscore5 = shotscore5 % 11
-    shotscore5 = shotscore5 * random.choice(multiple)
+    shotscore5 = shotscore5 * int(random.choice(multiple))
     
     totalscore = shotscore1+shotscore2+shotscore3+shotscore4+shotscore5
 
@@ -39,7 +39,8 @@ def shot():
         sText3 = '경품 뭐 주냐'
     elif totalscore < 2000 and totalscore >= 1000 :
         sText3 = '경품 뭐 주냐'
-
+    elif totalscore >=0 and totalscore < 1000:
+        sText3 = '참가상 1셀을 받았다!'
     
 
     return sText, sText2, sText3
