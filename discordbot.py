@@ -95,7 +95,7 @@ async def on_message(message):
         embed=discord.Embed(title=":gun:사격게임", 
                             description="기회는 5번! 준비하시고~ 쏘세요!", 
                             color=0x6D4948)
-        embed.add_field(name='', value=shottext, inline=False)
+        embed.add_field(name='빵야!', value=shottext, inline=False)
         embed.add_field(name=shottext2, value=shottext3, inline=False)
         await message.channel.send(embed=embed, reference=message)
 
