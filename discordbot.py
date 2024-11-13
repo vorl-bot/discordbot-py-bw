@@ -104,28 +104,28 @@ async def on_message(message):
     if message.content.startswith(f'{PREFIX}주방'):
        KitchenDraw = magnum2.Kitchen()
        embed = discord.Embed(description="주방에서 찾아낸 요리 재료는……",
-                            color=discord.Color.Red())
+                            color=0xED4245)
        embed.add_field(name=KitchenDraw, value='', inline=False)
        await message.channel.send(embed=embed, reference=message)
     #온실
     if message.content.startswith(f'{PREFIX}온실'):
        GardenDraw = magnum2.Greenhouse()
        embed = discord.Embed(description="온실에서 찾아낸 요리 재료는……",
-                            color=discord.Color.Green())
+                            color=0x57F287)
        embed.add_field(name=GardenDraw, value='', inline=False)
        await message.channel.send(embed=embed, reference=message)
     #인공호수
     if message.content.startswith(f'{PREFIX}인공호수'):
        LakeDraw = magnum2.Lake()
        embed = discord.Embed(description="인공호수에서 찾아낸 요리 재료는……",
-                            color=discord.Color.Blue())
+                            color=0x3498DB)
        embed.add_field(name=LakeDraw, value='', inline=False)
        await message.channel.send(embed=embed, reference=message)
     #조미료
     if message.content.startswith(f'{PREFIX}조미료'):
        SeasoningDraw = magnum2.Seasoning()
        embed = discord.Embed(description="손에 쥐여진 조미료는……",
-                            color=discord.Color.White())
+                            color=0xFFFFFF)
        embed.add_field(name=SeasoningDraw, value='', inline=False)
        await message.channel.send(embed=embed, reference=message)
 
