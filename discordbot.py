@@ -99,6 +99,39 @@ async def on_message(message):
         embed.add_field(name=shottext2, value=shottext3, inline=False)
         await message.channel.send(embed=embed, reference=message)
 
+    #RGB요리사
+    #주방
+    if message.content.startswith(f'{PREFIX}주방'):
+       KitchenDraw = magnum2.Kitchen()
+       KDrawText = KitchenDraw[0]
+       embed = discord.Embed(description="주방에서 찾아낸 요리 재료는……",
+                            color=discord.Color.Red())
+       embed.add_field(name=KDrawText, value='', inline=False)
+       await message.channel.send(embed=embed, reference=message)
+    #온실
+    if message.content.startswith(f'{PREFIX}온실'):
+       GardenDraw = magnum2.Greenhouse()
+       GDrawText = GardenDraw[0]
+       embed = discord.Embed(description="온실에서 찾아낸 요리 재료는……",
+                            color=discord.Color.Green())
+       embed.add_field(name=GDrawText, value='', inline=False)
+       await message.channel.send(embed=embed, reference=message)
+    #인공호수
+    if message.content.startswith(f'{PREFIX}인공호수'):
+       LakeDraw = magnum2.Lake()
+       LDrawText = LakeDraw[0]
+       embed = discord.Embed(description="인공호수에서 찾아낸 요리 재료는……",
+                            color=discord.Color.Blue())
+       embed.add_field(name=LDrawText, value='', inline=False)
+       await message.channel.send(embed=embed, reference=message)
+    #조미료
+    if message.content.startswith(f'{PREFIX}조미료'):
+       SeasoningDraw = magnum2.Seasoning()
+       SDrawText = SeasoningDraw[0]
+       embed = discord.Embed(description="손에 쥐여진 조미료는……",
+                            color=discord.Color.White())
+       embed.add_field(name=SDrawText, value='', inline=False)
+       await message.channel.send(embed=embed, reference=message)
 
            #특수가챠
     if message.content.startswith(f'{PREFIX}특챠'):
