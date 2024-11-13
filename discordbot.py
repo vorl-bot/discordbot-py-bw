@@ -98,6 +98,8 @@ async def on_message(message):
         embed.add_field(name='빵야!', value=shottext, inline=False)
         embed.add_field(name=shottext2, value=shottext3, inline=False)
         await message.channel.send(embed=embed, reference=message)
+    #비밀메뉴
+
 
     #RGB요리사
     #주방
@@ -128,6 +130,16 @@ async def on_message(message):
                             color=0xFFFFFF)
        embed.add_field(name=SeasoningDraw, value='', inline=False)
        await message.channel.send(embed=embed, reference=message)
+    #방청객
+    if message.content.startswith(f'{PREFIX}점수권'):
+       ChanceDraw = magnum2.Audience()
+       CDrawText = ChanceDraw[0]
+       CDrawText2 = ChanceDraw[1]
+       embed = discord.Embed(description="뒤적뒤적뒤적… 종이가 잡혔다!",
+                            color=0x1ABC9C)
+       embed.add_field(name=CDrawText, value=CDrawText2, inline=False)
+       await message.channel.send(embed=embed, reference=message)
+
 
            #특수가챠
     if message.content.startswith(f'{PREFIX}특챠'):

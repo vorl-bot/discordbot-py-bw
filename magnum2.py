@@ -105,3 +105,32 @@ def Seasoning():
     SItem = random.choice(SeasoningItem)
 
     return SItem
+
+def Audience():
+
+    ChanceNumber = random.randrange(0,5)
+    
+    if ChanceNumber == 0:
+        CText = '[당첨!]'
+        CText2 = '추가 점수권 획득! 가장 마음에 들었던 요리에 추가 점수를 주세요!'
+    elif ChanceNumber == 1:
+        CText = '[꽝!]'
+        CText2 = '안타깝네요! 친구들에게 애교를 보여주고 옵시다! \n ※해당 미션 완료 시 재 뽑기가 가능합니다.'
+    elif ChanceNumber == 2:
+        CText = '[꽝!]'
+        CText2 = '안타깝네요! 친구들에게 노래를 불러주고 옵시다! \n ※해당 미션 완료 시 재 뽑기가 가능합니다.'
+    elif ChanceNumber == 3:
+        CText = '[꽝!]'
+        CText2 = '안타깝네요! 친구들 앞에서 춤을 추고 옵시다! \n ※해당 미션 완료 시 재 뽑기가 가능합니다.'
+    elif ChanceNumber == 4:
+        CText = '[꽝!]'
+        CText2 = '안타깝네요! 친구들 앞에서 개인기를 하고 옵시다! \n ※해당 미션 완료 시 재 뽑기가 가능합니다.'
+
+    return CText, CText2
+
+def SecretMenu():
+
+
+
+
+    return
