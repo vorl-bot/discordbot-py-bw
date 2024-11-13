@@ -99,7 +99,13 @@ async def on_message(message):
         embed.add_field(name=shottext2, value=shottext3, inline=False)
         await message.channel.send(embed=embed, reference=message)
     #비밀메뉴
-
+    if message.content.startswith(f'{PREFIX}비밀메뉴'):
+        SMenu = magnum2.SecretMenu()
+        embed=discord.Embed(title=":fork_knife_plate:비밀 메뉴 찾기!", 
+                            description="비밀 메뉴를 찾아보자!", 
+                            color=0x008083)
+        embed.add_field(name='첫 번째 힌트는?', value=SMenu, inline=False)
+        await message.channel.send(embed=embed, reference=message)
 
     #RGB요리사
     #주방

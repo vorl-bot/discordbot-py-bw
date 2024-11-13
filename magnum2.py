@@ -133,8 +133,14 @@ def SecretMenu():
     SecretNum = random.randrange(0,5)
 
     if SecretNum == 0:
-        Text = ''
+        SText = '화분이 놓여 있는 장소. 햇볕이 따스하다.'
+    elif SecretNum == 1:
+        SText = '노래를 부를 수 있는 장소. 언제쯤 정식 개방이 되는 걸까?'
+    elif SecretNum == 2:
+        SText = '다양한 생물을 만날 수 있는 장소. 진짜가 아니라는 것이 아쉽다.'
+    elif SecretNum == 3:
+        SText = '음식을 함부로 넣어두면 담당 퐁당이에게 혼나!'
+    elif SecretNum == 4:
+        SText = '이 장소에서라면 나도 모두의 주목을 받는 주인공?!'
 
-
-
-    return
+    return SText
