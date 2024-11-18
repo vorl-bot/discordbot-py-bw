@@ -214,6 +214,51 @@ def RSP():
     elif RSPNum == 2:
         text = '보'
 
-    return
+    return text
+
+def ItemDrop():
+
+    ColNum = random.randrange(0,101)
+    ColNum = ColNum % 13
+    ColNum = ColNum + 2
+
+    RowNum = random.randrange(0,101)
+    RowNum = RowNum % 13
+
+    if RowNum == 0:
+        text = 'B'
+    elif RowNum == 1:
+        text = 'C'
+    elif RowNum == 2:
+        text = 'D'
+    elif RowNum == 3:
+        text = 'E'
+    elif RowNum == 4:
+        text = 'F'
+    elif RowNum == 5:
+        text = 'G'
+    elif RowNum == 6:
+        text = 'H'
+    elif RowNum == 7:
+        text = 'I'
+    elif RowNum == 8:
+        text = 'J'
+    elif RowNum == 9:
+        text = 'K'
+    elif RowNum == 10:
+        text = 'L'
+    elif RowNum == 11:
+        text = 'M'
+    elif RowNum == 12:
+        text = 'N'
+
+    text = text + str(ColNum)
+
+    return text
+
+
+
+
+
 
 
