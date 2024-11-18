@@ -155,7 +155,47 @@ async def on_message(message):
                             color=0xffd57a)
         embed.add_field(name=rsp, value="", inline=False)
         await message.channel.send(embed=embed, reference=message)
-        
+
+    #공격
+    if message.content.startswith(f'{PREFIX}공격'):
+        ATK = magnum3.Attack()
+        text1 = ATK[0]
+        text2 = ATK[1]
+
+        embed=discord.Embed(title=":crossed_swords:공격!", 
+                            description=text1, 
+                            color=0xff2e2e)
+        embed.add_field(name=text2, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+    #방어
+    if message.content.startswith(f'{PREFIX}방어'):
+        DFC = magnum3.Defence()
+        text1 = DFC[0]
+        text2 = DFC[1]
+
+        embed=discord.Embed(title=":shield:방어!", 
+                            description=text1, 
+                            color=0x2e3cff)
+        embed.add_field(name=text2, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)    
+
+    #아이템
+    if message.content.startswith(f'{PREFIX}아이템'):
+        ITM = magnum3.Item()
+        text1 = ITM[0]
+        text2 = ITM[1]
+
+        embed=discord.Embed(title=":gem:아이템을 획득했다!", 
+                            description='', 
+                            color=0x2eff58)
+        embed.add_field(name=text1, value=text2, inline=False)
+        await message.channel.send(embed=embed, reference=message)    
+
+    #드랍
+    if message.content.startswith(f'{PREFIX}우동'):
+        DRP = magnum3.ItemDrop()
+        await message.channel.send(DRP, reference=message) 
 
 try:
     client.run(TOKEN)

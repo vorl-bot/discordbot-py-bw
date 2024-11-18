@@ -90,7 +90,7 @@ def Mission():
 
     return text
 
-def Aattack():
+def Attack():
 
     ActNum = random.randrange(0,1001)
     ActNum = ActNum % 3
@@ -214,7 +214,7 @@ def RSP():
     elif RSPNum == 2:
         text = '보'
 
-    return text
+    return
 
 def ItemDrop():
 
@@ -255,10 +255,3 @@ def ItemDrop():
     text = text + str(ColNum)
 
     return text
-
-
-
-
-
-
-
