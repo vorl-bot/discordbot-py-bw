@@ -6,7 +6,7 @@ import os
 load_dotenv()
 import random
 import gacha
-import magnum2
+import magnum3
 import soriziller
 import omikuji
 
@@ -75,79 +75,7 @@ async def on_message(message):
        embed.add_field(name=omikujiText, value=omikujiText2, inline=False)
        await message.channel.send(embed=embed, reference=message)
 
-    #마그눔오푸스2
-    #물풍선낚시
-    if message.content.startswith(f'{PREFIX}물풍선'):
-        yoyo = magnum2.yoyotsuri()
-        yoyotext = yoyo[0]
-        yoyotext2 = yoyo[1]
-        embed=discord.Embed(title=":bubbles:물풍선낚시!", 
-                            description="조심조심······. 가는 종이를 돌려 만들어진 낚싯대를 들고 물풍선의 고리를 낚싯대에 걸어 물풍선을 건져보자.", 
-                            color=0x52ebff)
-        embed.add_field(name=yoyotext, value=yoyotext2, inline=False)
-        await message.channel.send(embed=embed, reference=message)
-    #사격게임
-    if message.content.startswith(f'{PREFIX}사격'):
-        shotgame = magnum2.shot()
-        shottext = shotgame[0]
-        shottext2 = shotgame[1]
-        shottext3 = shotgame[2]
-        embed=discord.Embed(title=":gun:사격게임", 
-                            description="기회는 5번! 준비하시고~ 쏘세요!", 
-                            color=0x6D4948)
-        embed.add_field(name='빵야!', value=shottext, inline=False)
-        embed.add_field(name=shottext2, value=shottext3, inline=False)
-        await message.channel.send(embed=embed, reference=message)
-    #비밀메뉴
-    if message.content.startswith(f'{PREFIX}비밀메뉴'):
-        SMenu = magnum2.SecretMenu()
-        embed=discord.Embed(title=":fork_knife_plate:비밀 메뉴 찾기!", 
-                            description="비밀 메뉴를 찾아보자!", 
-                            color=0x008083)
-        embed.add_field(name='첫 번째 힌트는?', value=SMenu, inline=False)
-        await message.channel.send(embed=embed, reference=message)
-
-    #RGB요리사
-    #주방
-    if message.content.startswith(f'{PREFIX}주방'):
-       KitchenDraw = magnum2.Kitchen()
-       embed = discord.Embed(description="주방에서 찾아낸 요리 재료는……",
-                            color=0xED4245)
-       embed.add_field(name=KitchenDraw, value='', inline=False)
-       await message.channel.send(embed=embed, reference=message)
-    #온실
-    if message.content.startswith(f'{PREFIX}온실'):
-       GardenDraw = magnum2.Greenhouse()
-       embed = discord.Embed(description="온실에서 찾아낸 요리 재료는……",
-                            color=0x57F287)
-       embed.add_field(name=GardenDraw, value='', inline=False)
-       await message.channel.send(embed=embed, reference=message)
-    #인공호수
-    if message.content.startswith(f'{PREFIX}인공호수'):
-       LakeDraw = magnum2.Lake()
-       embed = discord.Embed(description="인공호수에서 찾아낸 요리 재료는……",
-                            color=0x3498DB)
-       embed.add_field(name=LakeDraw, value='', inline=False)
-       await message.channel.send(embed=embed, reference=message)
-    #조미료
-    if message.content.startswith(f'{PREFIX}조미료'):
-       SeasoningDraw = magnum2.Seasoning()
-       embed = discord.Embed(description="손에 쥐여진 조미료는……",
-                            color=0xFFFFFF)
-       embed.add_field(name=SeasoningDraw, value='', inline=False)
-       await message.channel.send(embed=embed, reference=message)
-    #방청객
-    if message.content.startswith(f'{PREFIX}점수권'):
-       ChanceDraw = magnum2.Audience()
-       CDrawText = ChanceDraw[0]
-       CDrawText2 = ChanceDraw[1]
-       embed = discord.Embed(description="뒤적뒤적뒤적… 종이가 잡혔다!",
-                            color=0x1ABC9C)
-       embed.add_field(name=CDrawText, value=CDrawText2, inline=False)
-       await message.channel.send(embed=embed, reference=message)
-
-
-           #특수가챠
+    #특수가챠
     if message.content.startswith(f'{PREFIX}특챠'):
         special = gacha.specialGacha()
 
@@ -173,10 +101,47 @@ async def on_message(message):
             embed.add_field(name="", value='<'+special[0]+">이(가) 나왔다.", inline=False)
             await message.channel.send(embed=embed, reference=message)
 
+    #세번째 마그눔오푸스
+    #실뽑기
+    if message.content.startswith(f'{PREFIX}물레'):
+        thread = magnum3.spinning()
+        text1 = thread[0]
+        text2 = thread[1]
+
+        embed=discord.Embed(title=":yarn:실 잣기!", 
+                            description="드르륵 드르륵... 물레를 돌려 양털에서 실을 뽑아내자.", 
+                            color=0xc670ff)
+        embed.add_field(name=text1, value=text2, inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+    #천짜기
+    if message.content.startswith(f'{PREFIX}베틀'):
+        fabric = magnum3.weaving()
+        text1 = fabric[0]
+        text2 = fabric[1]
+
+        embed=discord.Embed(title=":thread:옷감 짜기!", 
+                            description="드르륵 드르륵... 뽑아낸 실로 베틀에서 옷감을 짜 보자.", 
+                            color=0xff707e)
+        embed.add_field(name=text1, value=text2, inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+    #감정
+    if message.content.startswith(f'{PREFIX}감정'):
+        valued = magnum3.valuation()
+        
+        embed=discord.Embed(title=":mag:이 물건의 가치는?", 
+                            description="골동품점에서 찾아낸 물건을 유심히 들여다보자. 나의 예측이 맞았을까? \n 이 물건의 실제 가치는...", 
+                            color=0x70fff5)
+        embed.add_field(name=valued, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+
 try:
     client.run(TOKEN)
 except discord.errors.LoginFailure as e:
     print("Improper token has been passed.")
+
 
 """
 #첫번째 마그눔 오푸스
@@ -285,5 +250,78 @@ except discord.errors.LoginFailure as e:
                             color=0x8c2b3f)
         embed.add_field(name='', value='', inline=False)
         await message.channel.send(embed=embed, reference=message)
+
+#마그눔오푸스2
+    #물풍선낚시
+    if message.content.startswith(f'{PREFIX}물풍선'):
+        yoyo = magnum2.yoyotsuri()
+        yoyotext = yoyo[0]
+        yoyotext2 = yoyo[1]
+        embed=discord.Embed(title=":bubbles:물풍선낚시!", 
+                            description="조심조심······. 가는 종이를 돌려 만들어진 낚싯대를 들고 물풍선의 고리를 낚싯대에 걸어 물풍선을 건져보자.", 
+                            color=0x52ebff)
+        embed.add_field(name=yoyotext, value=yoyotext2, inline=False)
+        await message.channel.send(embed=embed, reference=message)
+    #사격게임
+    if message.content.startswith(f'{PREFIX}사격'):
+        shotgame = magnum2.shot()
+        shottext = shotgame[0]
+        shottext2 = shotgame[1]
+        shottext3 = shotgame[2]
+        embed=discord.Embed(title=":gun:사격게임", 
+                            description="기회는 5번! 준비하시고~ 쏘세요!", 
+                            color=0x6D4948)
+        embed.add_field(name='빵야!', value=shottext, inline=False)
+        embed.add_field(name=shottext2, value=shottext3, inline=False)
+        await message.channel.send(embed=embed, reference=message)
+    #비밀메뉴
+    if message.content.startswith(f'{PREFIX}비밀메뉴'):
+        SMenu = magnum2.SecretMenu()
+        embed=discord.Embed(title=":fork_knife_plate:비밀 메뉴 찾기!", 
+                            description="비밀 메뉴를 찾아보자!", 
+                            color=0x008083)
+        embed.add_field(name='첫 번째 힌트는?', value=SMenu, inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+    #RGB요리사
+    #주방
+    if message.content.startswith(f'{PREFIX}주방'):
+       KitchenDraw = magnum2.Kitchen()
+       embed = discord.Embed(description="주방에서 찾아낸 요리 재료는……",
+                            color=0xED4245)
+       embed.add_field(name=KitchenDraw, value='', inline=False)
+       await message.channel.send(embed=embed, reference=message)
+    #온실
+    if message.content.startswith(f'{PREFIX}온실'):
+       GardenDraw = magnum2.Greenhouse()
+       embed = discord.Embed(description="온실에서 찾아낸 요리 재료는……",
+                            color=0x57F287)
+       embed.add_field(name=GardenDraw, value='', inline=False)
+       await message.channel.send(embed=embed, reference=message)
+    #인공호수
+    if message.content.startswith(f'{PREFIX}인공호수'):
+       LakeDraw = magnum2.Lake()
+       embed = discord.Embed(description="인공호수에서 찾아낸 요리 재료는……",
+                            color=0x3498DB)
+       embed.add_field(name=LakeDraw, value='', inline=False)
+       await message.channel.send(embed=embed, reference=message)
+    #조미료
+    if message.content.startswith(f'{PREFIX}조미료'):
+       SeasoningDraw = magnum2.Seasoning()
+       embed = discord.Embed(description="손에 쥐여진 조미료는……",
+                            color=0xFFFFFF)
+       embed.add_field(name=SeasoningDraw, value='', inline=False)
+       await message.channel.send(embed=embed, reference=message)
+    #방청객
+    if message.content.startswith(f'{PREFIX}점수권'):
+       ChanceDraw = magnum2.Audience()
+       CDrawText = ChanceDraw[0]
+       CDrawText2 = ChanceDraw[1]
+       embed = discord.Embed(description="뒤적뒤적뒤적… 종이가 잡혔다!",
+                            color=0x1ABC9C)
+       embed.add_field(name=CDrawText, value=CDrawText2, inline=False)
+       await message.channel.send(embed=embed, reference=message)
+
+
 """
 
