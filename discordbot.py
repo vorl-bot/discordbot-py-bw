@@ -136,6 +136,16 @@ async def on_message(message):
         embed.add_field(name=valued, value="", inline=False)
         await message.channel.send(embed=embed, reference=message)
 
+    #미션
+    if message.content.startswith(f'{PREFIX}미션'):
+        mission = magnum3.Mission()
+        
+        embed=discord.Embed(title=":white_check_mark:미션!", 
+                            description="다음의 미션을 수행하라.", 
+                            color=0xffffff)
+        embed.add_field(name=mission, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
 
 try:
     client.run(TOKEN)
