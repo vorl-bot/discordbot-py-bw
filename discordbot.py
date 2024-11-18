@@ -151,7 +151,7 @@ async def on_message(message):
         rsp = magnum3.RSP()
         
         embed=discord.Embed(title=":vs:대결!", 
-                            description="안 내면 진 거, 가위 바위 보!", 
+                            description="안 내면 진 거! 가위 바위 보!", 
                             color=0xffd57a)
         embed.add_field(name=rsp, value="", inline=False)
         await message.channel.send(embed=embed, reference=message)
