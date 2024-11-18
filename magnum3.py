@@ -92,11 +92,115 @@ def Mission():
 
 def Aattack():
 
-    return
+    ActNum = random.randrange(0,1001)
+    ActNum = ActNum % 3
+
+    if ActNum == 0:
+        text = '점령전에서 승리했다.'
+        ActWinNum = random.randrange(0,100)
+        ActWinNum = ActWinNum % 3
+        if ActWinNum == 0:
+            text2 = '대승리!'
+        elif ActWinNum == 1:
+            text2 = '안정적 승리!'
+        elif ActWinNum == 2:
+            text2 = '승리!'
+    elif ActNum == 1:
+        text = '점령전에서 패배했다.'
+        ActLoseNum = random.randrange(0,100)
+        ActLoseNum = ActLoseNum % 3
+        if ActLoseNum == 0:
+            text2 = '아까운 패배!'
+        elif ActLoseNum == 1:
+            text2 = '패배!'
+        elif ActLoseNum == 2:
+            text2 = '압도적 패배!'
+    elif ActNum == 2:
+        text = '점령전에서 패배해 상대팀에게 땅 한 칸을 빼앗겼다.'
+        ActLoseNum = random.randrange(0,100)
+        ActLoseNum = ActLoseNum % 2
+        if ActLoseNum == 0:
+            text2 = '패배!'
+        elif ActLoseNum == 1:
+            text2 = '압도적 패배!'
+
+
+    return text,text2
 
 def Defence():
 
-    return
+    DefNum = random.randrange(0,1001)
+    DefNum = DefNum % 3
+
+    if DefNum == 0:
+        text = '점령전에서 승리했다.'
+        DefWinNum = random.randrange(0,100)
+        DefWinNum = DefWinNum % 3
+        if DefWinNum == 0:
+            text2 = '대승리!'
+        elif DefWinNum == 1:
+            text2 = '안정적 승리!'
+        elif DefWinNum == 2:
+            text2 = '승리!'
+    elif DefNum == 1:
+        text = '점령전에서 패배했다.'
+        DefLoseNum = random.randrange(0,100)
+        DefLoseNum = DefLoseNum % 3
+        if DefLoseNum == 0:
+            text2 = '아까운 패배!'
+        elif DefLoseNum == 1:
+            text2 = '패배!'
+        elif DefLoseNum == 2:
+            text2 = '압도적 패배!'
+    elif DefNum == 2:
+        text = '점령전에서 승리해 상대팀에게 땅 한 칸을 빼앗았다.'
+        DefWinNum = random.randrange(0,100)
+        DefWinNum = DefWinNum % 2
+        if DefWinNum == 0:
+            text2 = '대승리!'
+        elif DefWinNum == 1:
+            text2 = '안정적 승리!'
+
+    return text, text2
+
+def Item():
+
+    ItemNum = random.randrange(0,1001)
+    ItemNum = ItemNum % 10
+
+    if ItemNum == 0:
+        text = '이동횟수 1회 추가권'
+        text2 = '기준 시간 내 한 번 더 이동할 수 있습니다.'
+    elif ItemNum == 1:
+        text = '이동 가능칸 1칸 추가권'
+        text2 = '1회 이동 시 한 칸 더 이동할 수 있습니다.'
+    elif ItemNum == 2:
+        text = '미션패스권'
+        text2 = '미션 진행 상태를 수행한 것으로 변경할 수 있습니다.'
+    elif ItemNum == 3:
+        text = '점령성공권'
+        text2 = '무조건 해당 땅을 점령합니다. 상대가 점령방어권을 사용할 경우 다이스 값이 높은 팀이 승리합니다.'
+    elif ItemNum == 4:
+        text = '점령방어권'
+        text2 = '해당 땅에 시도된 점령 시도를 완벽 방어합니다. 상대가 점령성공권을 사용했을 경우 다이스 값이 높은 팀이 승리합니다.'
+    elif ItemNum == 5:
+        text = '땅 소실'
+        text2 = '땅 한 칸을 잃습니다. 자신의 팀이 소유하고 있는 땅 중 잃을 땅 한 칸을 선택하여 흑과 백의 아틀리에 계정을 태그해주세요.'
+    elif ItemNum == 6:
+        text = '땅 획득'
+        text2 = '땅 한 칸을 얻습니다. 자신의 팀이 소유하고 있는 땅과 인접한 땅 중 얻고 싶은 땅 한 칸을 선택하여 흑과 백의 아틀리에 계정을 태그해주세요. 비어있는 땅에만 사용할 수 있습니다.'
+    elif ItemNum == 7:
+        text = '습격!'
+        text2 = '자신의 팀이 소유하고 있는 땅 중 한 칸을 타팀에게 빼앗깁니다. 빼앗길 땅 한 칸과 땅의 새로운 소유주는 운영진 측에서 결정합니다.'
+    elif ItemNum == 8:
+        text = '침략 성공!'
+        text2 = '타팀의 땅 하나를 뺏어올 수 있습니다. 뺏어올 땅 한 칸과 땅의 기존 소유주는 팀은 운영진 측에서 결정합니다.'
+    elif ItemNum == 9:
+        text = '결과값 교환권'
+        text2 = '상대의 결과값과 자신의 결과값을 바꿀 수 있습니다. 공격/방어 키워드 결과값에만 사용 가능합니다.'
+
+    return text, text2
+
 
 def RSP():
 
@@ -110,6 +214,6 @@ def RSP():
     elif RSPNum == 2:
         text = '보'
 
-    return text
+    return
 
 
