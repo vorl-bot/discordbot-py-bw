@@ -53,19 +53,3 @@ def valuation():
         text = 'S등급'
 
     return text
-
-def TLmission():
-
-    return
-
-def TLitem():
-
-    return
-
-def TLattack():
-
-    return
-
-def TLdefence():
-
-    return
