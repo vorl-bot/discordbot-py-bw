@@ -214,7 +214,7 @@ def RSP():
     elif RSPNum == 2:
         text = '보'
 
-    return
+    return text
 
 def ItemDrop():
 
