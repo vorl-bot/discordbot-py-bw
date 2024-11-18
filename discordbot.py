@@ -140,7 +140,7 @@ async def on_message(message):
     if message.content.startswith(f'{PREFIX}미션'):
         mission = magnum3.Mission()
         
-        embed=discord.Embed(title=":white_check_mark:미션!", 
+        embed=discord.Embed(title=":bangbang:미션!", 
                             description="다음의 미션을 수행하라.", 
                             color=0xffffff)
         embed.add_field(name=mission, value="", inline=False)
