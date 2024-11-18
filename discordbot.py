@@ -145,7 +145,17 @@ async def on_message(message):
                             color=0xffffff)
         embed.add_field(name=mission, value="", inline=False)
         await message.channel.send(embed=embed, reference=message)
-
+        
+    #가위바위보
+    if message.content.startswith(f'{PREFIX}가위바위보'):
+        rsp = magnum3.RSP()
+        
+        embed=discord.Embed(title=":vs:대결!", 
+                            description="안 내면 진 거, 가위 바위 보!", 
+                            color=0xffd57a)
+        embed.add_field(name=rsp, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+        
 
 try:
     client.run(TOKEN)
