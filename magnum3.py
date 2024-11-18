@@ -53,3 +53,63 @@ def valuation():
         text = 'S등급'
 
     return text
+
+def Mission():
+    
+    MissionNum = random.randrange(0,1001)
+    MissionNum = MissionNum % 15
+
+    if MissionNum < 2:
+        text = '미션 없이 통과! 운이 좋았네.'
+    elif MissionNum == 2:
+        text = '음악에 맞춰 춤을 추시오.'
+    elif MissionNum == 3:
+        text = '친구들에게 애교를 보여주시오.'
+    elif MissionNum == 4:
+        text = '일반 가챠를 1회 뽑으시오.'
+    elif MissionNum == 5:
+        text = '친구에게 선물을 주시오.'
+    elif MissionNum == 6:
+        text = '노래방에서 80점 이상을 달성하시오.\n ※실패 시 10분의 제한시간이 지난 후 재도전이 가능합니다.'
+    elif MissionNum == 7:
+        text = '친구 한 명에게 칭찬을 3개 하시오.'
+    elif MissionNum == 8:
+        text = '친구에게 가위바위보로 이기시오. \n ※해당 채널에서 !가위바위보 키워드로 이용할 수 있습니다.'
+    elif MissionNum == 9:
+        text = '의류점에서 물레를 돌리시오.'
+    elif MissionNum == 10:
+        text = '친구 귀에 "넌 네꺼야" 라고 속삭이시오.'
+    elif MissionNum == 11:
+        text = '친구 귀에 "난 내꺼야" 라고 속삭이시오.'
+    elif MissionNum == 12:
+        text = '본인의 비밀 하나를 친구에게 고백하시오.'
+    elif MissionNum == 13:
+        text = '피콕 경을 칭찬하시오.'
+    elif MissionNum == 14:
+        text = '퐁당이 성대모사를 하시오.'
+
+    return text
+
+def Aattack():
+
+    return
+
+def Defence():
+
+    return
+
+def RSP():
+
+    RSPNum = random.randrange(0,101)
+    RSPNum = RSPNum % 3
+
+    if RSPNum == 0:
+        text = '가위'
+    elif RSPNum == 1:
+        text = '바위'
+    elif RSPNum == 2:
+        text = '보'
+
+    return
+
+
