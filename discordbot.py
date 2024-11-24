@@ -6,9 +6,9 @@ import os
 load_dotenv()
 import random
 import gacha
-import magnum3
 import soriziller
 import omikuji
+import arcade
 
 from datetime import datetime
 from pytz import timezone
@@ -43,7 +43,7 @@ async def on_message(message):
     if message.content.startswith(f'{PREFIX}동전'):
         c = random.choice(['앞면','뒷면'])
         embed=discord.Embed(description=":coin:팅그르르...",
-                            color=0x61b866)
+                            color=0x008083)
         embed.add_field(name=c, value=" ", inline=False)
         await message.channel.send(embed=embed, reference=message)
 
@@ -51,7 +51,7 @@ async def on_message(message):
     if message.content.startswith(f'{PREFIX}다이스'):
         d = random.randrange(1,101)
         embed = discord.Embed(description=":game_die:도르르륵...",
-                            color=0x000000)
+                            color=0x008083)
         embed.add_field(name=d, value=" ", inline=False)
         await message.channel.send(embed=embed, reference=message)
 
@@ -101,101 +101,61 @@ async def on_message(message):
             embed.add_field(name="", value='<'+special[0]+">이(가) 나왔다.", inline=False)
             await message.channel.send(embed=embed, reference=message)
 
-    #세번째 마그눔오푸스
-    #실뽑기
-    if message.content.startswith(f'{PREFIX}물레'):
-        thread = magnum3.spinning()
-        text1 = thread[0]
-        text2 = thread[1]
+    #오락실
+    #하이로우
+    if message.content.startswith(f'{PREFIX}배팅'):
 
-        embed=discord.Embed(title=":yarn:실 잣기!", 
-                            description="드르륵 드르륵... 물레를 돌려 양털에서 실을 뽑아내자.", 
-                            color=0xc670ff)
-        embed.add_field(name=text1, value=text2, inline=False)
+        embed=discord.Embed(title=":moneybag:배팅!",
+                            description="높은 수일까, 낮은 수일까? 결과는...",
+                            color=0x008083)
+        embed.add_field(name=random.randrange(1,51), value='', inline=False)
         await message.channel.send(embed=embed, reference=message)
-
-    #천짜기
-    if message.content.startswith(f'{PREFIX}베틀'):
-        fabric = magnum3.weaving()
-        text1 = fabric[0]
-        text2 = fabric[1]
-
-        embed=discord.Embed(title=":thread:옷감 짜기!", 
-                            description="드르륵 드르륵... 뽑아낸 실로 베틀에서 옷감을 짜 보자.", 
-                            color=0xff707e)
-        embed.add_field(name=text1, value=text2, inline=False)
-        await message.channel.send(embed=embed, reference=message)
-
-    #감정
-    if message.content.startswith(f'{PREFIX}감정'):
-        valued = magnum3.valuation()
-        
-        embed=discord.Embed(title=":mag:이 물건의 가치는?", 
-                            description="골동품점에서 찾아낸 물건을 유심히 들여다보자. 나의 예측이 맞았을까? \n 이 물건의 실제 가치는...", 
-                            color=0x70fff5)
-        embed.add_field(name=valued, value="", inline=False)
-        await message.channel.send(embed=embed, reference=message)
-
-    #미션
-    if message.content.startswith(f'{PREFIX}미션'):
-        mission = magnum3.Mission()
-        
-        embed=discord.Embed(title=":bangbang:미션!", 
-                            description="다음의 미션을 수행하라.", 
-                            color=0xffffff)
-        embed.add_field(name=mission, value="", inline=False)
-        await message.channel.send(embed=embed, reference=message)
-        
+    
     #가위바위보
     if message.content.startswith(f'{PREFIX}가위바위보'):
-        rsp = magnum3.RSP()
+        rsp = arcade.RSP()
         
         embed=discord.Embed(title=":vs:대결!", 
                             description="안 내면 진 거! 가위 바위 보!", 
-                            color=0xffd57a)
+                            color=0x008083)
         embed.add_field(name=rsp, value="", inline=False)
         await message.channel.send(embed=embed, reference=message)
+    #가위바위보 컴이랑 뜨기
+    if message.content.startswith(f'{PREFIX}대결'):
+        rspVS = arcade.RSP_Com()
+        VSText = rspVS[0]
+        VSText2 = rspVS[1]
+        VSText3 = rspVS[2]
 
-    #공격
-    if message.content.startswith(f'{PREFIX}공격'):
-        ATK = magnum3.Attack()
-        text1 = ATK[0]
-        text2 = ATK[1]
-
-        embed=discord.Embed(title=":crossed_swords:공격!", 
-                            description=text1, 
-                            color=0xff2e2e)
-        embed.add_field(name=text2, value="", inline=False)
+        embed=discord.Embed(title=":vs:대결!", 
+                            description="헥스 vs Ai퐁당", 
+                            color=0x008083)
+        embed.add_field(name=rsp, value= VSText + '를 냈다. \n Ai퐁당이 ' + VSText2 + '를 냈다.', inline=False)
+        embed.add_field(name="결과는?!", value=VSText3, inline=False)
         await message.channel.send(embed=embed, reference=message)
 
-    #방어
-    if message.content.startswith(f'{PREFIX}방어'):
-        DFC = magnum3.Defence()
-        text1 = DFC[0]
-        text2 = DFC[1]
+    #사격게임
+    if message.content.startswith(f'{PREFIX}게임시작'):
+        shotgame = arcade.ZombieGame()
+        shottext = shotgame[0]
+        shottext2 = shotgame[1]
+        embed=discord.Embed(title=":syringe:리빙온더데드", 
+                            description="좀비들을 피해서 백신을 구해오자!", 
+                            color=0x008083)
+        embed.add_field(name='GAME START!', value="탕! 탕! 나타나는 좀비들을 처치하며 연구소로 향했다. \n . \n . \n . ", inline=False)
+        embed.add_field(name=shottext, value=shottext2, inline=False)
+        await message.channel.send(embed=embed, reference=message)
 
-        embed=discord.Embed(title=":shield:방어!", 
-                            description=text1, 
-                            color=0x2e3cff)
-        embed.add_field(name=text2, value="", inline=False)
-        await message.channel.send(embed=embed, reference=message)    
+    #슬롯머신
+    if message.content.startswith(f'{PREFIX}슬롯머신'):
+        SM = arcade.SlotMachine()
+        
+        embed = discord.Embed(description=":slot_machine:드르륵 탁",
+                            color=0x008083)
+        embed.add_field(name=SM, value=" ", inline=False)
+        await message.channel.send(embed=embed, reference=message)
 
-    #아이템
-    if message.content.startswith(f'{PREFIX}아이템'):
-        ITM = magnum3.Item()
-        text1 = ITM[0]
-        text2 = ITM[1]
 
-        embed=discord.Embed(title=":gem:아이템을 획득했다!", 
-                            description='', 
-                            color=0x2eff58)
-        embed.add_field(name=text1, value=text2, inline=False)
-        await message.channel.send(embed=embed, reference=message)    
-
-    #드랍
-    if message.content.startswith(f'{PREFIX}우동'):
-        DRP = magnum3.ItemDrop()
-        await message.channel.send(DRP, reference=message) 
 
 try:
     client.run(TOKEN)
@@ -384,4 +344,91 @@ except discord.errors.LoginFailure as e:
 
 
 """
+"""
+    #세번째 마그눔오푸스
+    #실뽑기
+    if message.content.startswith(f'{PREFIX}물레'):
+        thread = magnum3.spinning()
+        text1 = thread[0]
+        text2 = thread[1]
 
+        embed=discord.Embed(title=":yarn:실 잣기!", 
+                            description="드르륵 드르륵... 물레를 돌려 양털에서 실을 뽑아내자.", 
+                            color=0xc670ff)
+        embed.add_field(name=text1, value=text2, inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+    #천짜기
+    if message.content.startswith(f'{PREFIX}베틀'):
+        fabric = magnum3.weaving()
+        text1 = fabric[0]
+        text2 = fabric[1]
+
+        embed=discord.Embed(title=":thread:옷감 짜기!", 
+                            description="드르륵 드르륵... 뽑아낸 실로 베틀에서 옷감을 짜 보자.", 
+                            color=0xff707e)
+        embed.add_field(name=text1, value=text2, inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+    #감정
+    if message.content.startswith(f'{PREFIX}감정'):
+        valued = magnum3.valuation()
+        
+        embed=discord.Embed(title=":mag:이 물건의 가치는?", 
+                            description="골동품점에서 찾아낸 물건을 유심히 들여다보자. 나의 예측이 맞았을까? \n 이 물건의 실제 가치는...", 
+                            color=0x70fff5)
+        embed.add_field(name=valued, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+    #미션
+    if message.content.startswith(f'{PREFIX}미션'):
+        mission = magnum3.Mission()
+        
+        embed=discord.Embed(title=":bangbang:미션!", 
+                            description="다음의 미션을 수행하라.", 
+                            color=0xffffff)
+        embed.add_field(name=mission, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)  
+
+    #공격
+    if message.content.startswith(f'{PREFIX}공격'):
+        ATK = magnum3.Attack()
+        text1 = ATK[0]
+        text2 = ATK[1]
+
+        embed=discord.Embed(title=":crossed_swords:공격!", 
+                            description=text1, 
+                            color=0xff2e2e)
+        embed.add_field(name=text2, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+    #방어
+    if message.content.startswith(f'{PREFIX}방어'):
+        DFC = magnum3.Defence()
+        text1 = DFC[0]
+        text2 = DFC[1]
+
+        embed=discord.Embed(title=":shield:방어!", 
+                            description=text1, 
+                            color=0x2e3cff)
+        embed.add_field(name=text2, value="", inline=False)
+        await message.channel.send(embed=embed, reference=message)    
+
+    #아이템
+    if message.content.startswith(f'{PREFIX}아이템'):
+        ITM = magnum3.Item()
+        text1 = ITM[0]
+        text2 = ITM[1]
+
+        embed=discord.Embed(title=":gem:아이템을 획득했다!", 
+                            description='', 
+                            color=0x2eff58)
+        embed.add_field(name=text1, value=text2, inline=False)
+        await message.channel.send(embed=embed, reference=message)    
+
+    #드랍
+    if message.content.startswith(f'{PREFIX}우동'):
+        DRP = magnum3.ItemDrop()
+        await message.channel.send(DRP, reference=message) 
+
+"""
