@@ -40,7 +40,7 @@ def ZombieGame():
 
     if shotscore4 >= 500:
         shotscore5 = random.randrange(0,1001)
-        sText3 = 'GAME CLEAR! 모든 스테이지를 클리어했다!'
+        sText3 = 'GAME CLEAR! 모든 스테이지를 클리어하고 백신을 구했다!'
     elif shotscore4 < 500:
         shotscore5 = 0
 
