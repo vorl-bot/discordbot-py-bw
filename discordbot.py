@@ -128,9 +128,9 @@ async def on_message(message):
         VSText3 = rspVS[2]
 
         embed=discord.Embed(title=":vs:대결!", 
-                            description="헥스 vs Ai퐁당", 
+                            description=" ", 
                             color=0x008083)
-        embed.add_field(name="", value= VSText + '를 냈다. \n Ai퐁당이 ' + VSText2 + '를 냈다.', inline=False)
+        embed.add_field(name="헥스 vs Ai퐁당", value= VSText + '를 냈다. \n Ai퐁당이 ' + VSText2 + '를 냈다.', inline=False)
         embed.add_field(name="결과는?!", value=VSText3, inline=False)
         await message.channel.send(embed=embed, reference=message)
 
