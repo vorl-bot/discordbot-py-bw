@@ -130,7 +130,7 @@ async def on_message(message):
         embed=discord.Embed(title=":vs:대결!", 
                             description="헥스 vs Ai퐁당", 
                             color=0x008083)
-        embed.add_field(name=rsp, value= VSText + '를 냈다. \n Ai퐁당이 ' + VSText2 + '를 냈다.', inline=False)
+        embed.add_field(name="", value= VSText + '를 냈다. \n Ai퐁당이 ' + VSText2 + '를 냈다.', inline=False)
         embed.add_field(name="결과는?!", value=VSText3, inline=False)
         await message.channel.send(embed=embed, reference=message)
 
@@ -143,14 +143,14 @@ async def on_message(message):
                             description="좀비들을 피해서 백신을 구해오자!", 
                             color=0x008083)
         embed.add_field(name='GAME START!', value="탕! 탕! 나타나는 좀비들을 처치하며 연구소로 향했다. \n . \n . \n . ", inline=False)
-        embed.add_field(name=shottext, value=shottext2, inline=False)
+        embed.add_field(name=shottext2, value=shottext, inline=False)
         await message.channel.send(embed=embed, reference=message)
 
     #슬롯머신
     if message.content.startswith(f'{PREFIX}슬롯머신'):
         SM = arcade.SlotMachine()
         
-        embed = discord.Embed(description=":slot_machine:드르륵 탁",
+        embed = discord.Embed(description=":slot_machine:",
                             color=0x008083)
         embed.add_field(name=SM, value=" ", inline=False)
         await message.channel.send(embed=embed, reference=message)
