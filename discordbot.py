@@ -42,7 +42,7 @@ async def on_message(message):
     #연챠
     if message.content.startswith(f'{PREFIX}연챠'):
         ncha_result = gacha.nGacha()
-        ncha_message = '삐롱삐롱삐로롱~ \n <'+ncha_result[0]+'>,\n <'+ncha_result[1]+'>,\n <'+ncha_result[2]+'>,\n <'+ncha_result[3]+'>,\n <'+ncha_result[4]+'>이(가) 나왔다!'
+        ncha_message = '삐롱삐롱삐로롱~ \n<'+ncha_result[0]+'>,\n<'+ncha_result[1]+'>,\n<'+ncha_result[2]+'>,\n<'+ncha_result[3]+'>,\n<'+ncha_result[4]+'>이(가) 나왔다!'
         await message.channel.send(ncha_message, reference=message)
 
     #동전
