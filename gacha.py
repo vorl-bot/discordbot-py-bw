@@ -74,3 +74,11 @@ def specialGacha():
 
 
     return special
+
+def nGacha():
+    nCha = []
+
+    while len(nCha) < 5:
+        nCha = nCha + [random.choice(items)]
+
+    return nCha

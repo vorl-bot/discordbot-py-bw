@@ -39,6 +39,12 @@ async def on_message(message):
         gacha_message = '삐로로롱~ <'+gacha_result+'>이(가) 나왔다!'
         await message.channel.send(gacha_message, reference=message)
 
+    #연챠
+    if message.content.startswith(f'{PREFIX}연챠'):
+        ncha_result = gacha.nGacha()
+        ncha_message = '삐롱삐롱삐로롱~ <'+ncha_result[0]+'>,<'+ncha_result[1]+'>,<'+ncha_result[2]+'>,<'+ncha_result[3]+'>,<'+ncha_result[4]+'>이(가) 나왔다!'
+        await message.channel.send(ncha_message, reference=message)
+
     #동전
     if message.content.startswith(f'{PREFIX}동전'):
         c = random.choice(['앞면','뒷면'])
